@@ -1,4 +1,4 @@
-# **Title**
+# **The To-Do List**
 
 # Overview
 
@@ -19,8 +19,8 @@
     * [Features for Future Implementation](#features-for-future-implementation)
 1. [Testing](#testing)
 1. [Development Life Cycle](#development-life-cycle)
-1. [Deployment](#deployment)
-    * [Via GitPod](#deployment-of-the-page)
+1. [Deployment of the Application](#deployment)
+    * [Cloning via GitPod](#cloning-a-project-into-gitpod)
     * [Cloning Locally](#how-to-run-the-code-locally)
 1. [Technologies Used](#technologies-used)
 1. [Credits](#credits)
@@ -170,19 +170,37 @@ Based on the experience of producing the website, the creator would now take the
 
 ## Deployment
 
-The website was created using [GitPod](https://www.gitpod.io/). Version control was undertaken by committing to [Git](https://git-scm.com/) and pushing to [GitHub](https://github.com/) using the functions within GitPod.
+The website was created using [GitPod](https://www.gitpod.io/). Version control was undertaken by committing to [Git](https://git-scm.com/) and pushing to [GitHub](https://github.com/) using the functions within GitPod.  [Heroku]((https://heroku.com/)) was used to deploy the live site.
 
 ### **Deployment of the Page**
-1. In the IDE, ensure the tree is clean, and all required items have been committed and pushed to the repository in GitHub.
-1. Sign in to GitHub.
-1. Navigate to the appropriate repository: `XXXXX`
-1. From the repository menu, choose Settings.
-![GitHub menu snip](assets/readme-images/deploy-1.png)
-1. On the sidebar menu to the left, find the Pages section.
-1. From the first dropdown box, choose the Master branch, then click save.
-![GitHub Pages snip](assets/readme-images/deploy-2.png)
-1. The page will refresh, and the Pages section now shows a URL for the deployed site.
-1. Click the URL to view the deployed website.
+Continuous deployment via GitHub-Heroku link was utilised for this project.  As such, deployment was amongst the first tasks undertaken.
+1. In the IDE, ensure that a small test application exists, and all changes are committed and pushed to GitHub.
+1. Create a requirements file, which will be used by Heroku in creation of the deployment.
+    * In the terminal, type "pip3 freeze --local > requirements.txt".
+    * Commit this to Git.
+1. Create a Procfile, which is used by Heroku to determine the language for the app.
+    * In the terminal, type "echo web: python app.py > Procfile".
+    * This is case sensitive, and should have a capital P, and should have no file extension.
+    * Commit this to Git.
+1. Push these files to GitHub.
+1. [Sign in to Heroku](https://id.heroku.com/login) (or [create a Heroku account](https://signup.heroku.com/) if you do not already have one), and choose "New > Create New App".
+![Heroku Dashboard snip](readme-images/heroku-1.png)
+1. Choose an app name, which must be unique, and select the nearest region.  Then click "Create App".
+![Heroku new app snip](readme-images/heroku-2.png)
+1. Once generated choose the "Deploy" tab, select "Connect to GitHub" sub-tab and click the "Connect to GitHub" button.
+![Heroku Deploy snip](readme-images/heroku-3.png)
+![Heroku GitHub snip](readme-images/heroku-4.png)
+1. Follow the on-screen instructions to link Heroku to your GitHub account.
+1. Once linked, Heroku will prompt for the repository name, complete this and click "Search".
+![Heroku GitHub snip](readme-images/heroku-5.png)
+1. The repo listing should appear, click "Connect".
+1. Heroku will process the request before showing that the connection has been made successfully, and showing two new options.  Click the first of these, which is to "Enable Automatic Deploys".
+![Heroku GitHub snip](readme-images/heroku-6.png)
+1. The second option is to "Deploy Branch".  Click the button and Heroku will process for some time.
+![Heroku GitHub snip](readme-images/heroku-7.png)
+1. Once complete, Heroku will display a checklist, followed by a "View" button.  Click this to open the app in a new tab.
+![Heroku GitHub snip](readme-images/heroku-8.png)
+1. Celebrate! Your app should now update in line with any changes pushed to GitHub.
 
 ### **How to Clone and Run the Code Locally**
 There are slightly different approaches should you choose to use GitPod to clone the project, or a local IDE.
@@ -192,13 +210,13 @@ There are slightly different approaches should you choose to use GitPod to clone
 1. If you do not already have one, [create a GitHub account](https://github.com/join).
 1. Install the [GitPod browser extension for Chrome](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki). *(Or Firefox if appropriate)*
 1. Restart Chrome.
-1. In GitHub, find the [project repository](https://github.com/XXXXX).
+1. In GitHub, find the [project repository](https://github.com/ci-14-task-manager).
 1. From the repository menu, choose the green GitPod button.
 ![GitPod button snip](readme-images/cloning-gitpod.png)
 1. A new GitPod workspace will open containing the project code.
 
 #### Cloning a Project into a Local IDE
-1. Navigate to the [GitHub Repository](https://github.com/XXXXX).
+1. Navigate to the [GitHub Repository](https://github.com/ci-14-task-manager).
 1. Choose the Code dropdown menu, and copy the URL.
 ![GitHub code download snip](readme-images/clone-local-ide.png)
 1. Open your local IDE and then open a terminal.
@@ -277,4 +295,4 @@ The images for this README are from the following sources:
 
 **Created by Amy Hacker.**
 
-[Back to Top](#XXXXX)
+[Back to Top](#the-to-do-list)
