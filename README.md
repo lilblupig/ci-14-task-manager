@@ -191,7 +191,9 @@ Continuous deployment via GitHub-Heroku link was utilised for this project.  As 
 ![Heroku Deploy snip](readme-images/heroku-3.png)
 ![Heroku GitHub snip](readme-images/heroku-4.png)
 1. Follow the on-screen instructions to link Heroku to your GitHub account.
-1. Once linked, Heroku will prompt for the repository name, complete this and click "Search".
+1. Click the "Settings" tab from the main menu, and scroll down to find "Reveal Config Vars".  This section should be populated with any sensitive data which is not appropriate to send to GitHub, usually in an "env.py" document.
+![Heroku GitHub snip](readme-images/heroku-vars.png)
+1. Back on the Deploy tab, once linked, Heroku will prompt for the repository name, complete this and click "Search".
 ![Heroku GitHub snip](readme-images/heroku-5.png)
 1. The repo listing should appear, click "Connect".
 1. Heroku will process the request before showing that the connection has been made successfully, and showing two new options.  Click the first of these, which is to "Enable Automatic Deploys".
