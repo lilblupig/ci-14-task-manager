@@ -245,6 +245,8 @@ You can find more information on cloning a repository from GitHub [here](https:/
 * [jQuery](https://jquery.com/) is used to simplify the implementation of interactive JavaScript components.
 * [Google Fonts](https://fonts.google.com/) are used to provide the typography for the website.
 * [Font Awesome](https://fontawesome.com/) is used to provide the icons for the website.
+* [Flask Pymongo]() was used to allow Flask to communicate with MongoDB.
+* [DNS Python]() was installed in order to use the Mongo SRV connection string.
 
 ### **Tools**
 * [Git](https://git-scm.com/)/[GitHub](https://github.com/) was used for version control and repository storage.
