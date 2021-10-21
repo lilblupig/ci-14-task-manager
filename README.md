@@ -242,6 +242,7 @@ You can find more information on cloning a repository from GitHub [here](https:/
 
 ### **Libraries and Frameworks**
 * [Bootstrap 5](https://getbootstrap.com/) is used to provide the grid functionality for uniform design, responsiveness and to enable the use of modal and hamburger menu.
+* [Materialize CSS]() 
 * [jQuery](https://jquery.com/) is used to simplify the implementation of interactive JavaScript components.
 * [Google Fonts](https://fonts.google.com/) are used to provide the typography for the website.
 * [Font Awesome](https://fontawesome.com/) is used to provide the icons for the website.
