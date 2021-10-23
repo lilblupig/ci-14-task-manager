@@ -132,6 +132,7 @@ Features common to all pages/sections:
 
 ### **Features for Future Implementation**
 1. What | Why
+Add user instructions/feedback on registration form.
 
 ## Testing
 
