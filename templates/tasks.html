@@ -3,22 +3,43 @@
 
     <h3 class="light-blue-text text-darken-4 center-align">Tasks</h3>
 
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search') }}" method="POST" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Tasks</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_tasks') }}" class="red btn">Reset</a>
+                    <button type="submit" class="light-blue darken-1 btn">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {% if tasks|length > 0 %}
     <ul class="collapsible">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4">
                 <div class="col s3">
                     <p><i class="fas fa-caret-down"></i>
-                    {% if session.user|lower == task.created_by|lower %}
-                    <a href="{{ url_for('delete_task', task_id=task._id) }}" class="green accent-4 btn-small">Done</a>
-                    <a href="{{ url_for('edit_task', task_id=task._id) }}" class="light-blue lighten-1 btn-small">Edit</a></p>
+                        {% if session.user|lower == task.created_by|lower %}
+                        <a href="{{ url_for('delete_task', task_id=task._id) }}"
+                            class="green accent-4 btn-small">Done</a>
+                        <a href="{{ url_for('edit_task', task_id=task._id) }}"
+                            class="light-blue lighten-1 btn-small">Edit</a></p>
                     {% endif %}
                 </div>
                 <div class="col s9">
                     <p>
                         <strong>{{ task.task_name }}</strong> | {{ task.due_date }}
                         {% if task.is_urgent == "on" %}
-                            <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
                             data-position="top" data-tooltip="URGENT!"></i>
                         {% endif %}
                     </p>
@@ -32,5 +53,8 @@
         </li>
         {% endfor %}
     </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No results found</h3>
+    {% endif %}
 
 {% endblock %}
